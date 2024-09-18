@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Pelican By Example</title><link href="https://apoclyps.github.io/pelican-by-example/" rel="alternate"></link><link href="https://apoclyps.github.io/pelican-by-example/feeds/all.atom.xml" rel="self"></link><id>https://apoclyps.github.io/pelican-by-example/</id><updated>2024-09-15T00:00:00+01:00</updated><entry><title>Getting started tutorial</title><link href="https://apoclyps.github.io/pelican-by-example/getting-started-tutorial.html" rel="alternate"></link><published>2024-09-15T00:00:00+01:00</published><updated>2024-09-15T00:00:00+01:00</updated><author><name>Kyle Harrison</name></author><id>tag:apoclyps.github.io,2024-09-15:/pelican-by-example/getting-started-tutorial.html</id><summary type="html">&lt;p&gt;The purpose of this tutorial is to generatic a static site using Pelican, to add a new article to it, and to host it on Github Pages.&lt;/p&gt;
+&lt;h2&gt;Step 1: Create a GitHub Account and Repository&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Ensure you have a GitHub account.&lt;/strong&gt; If you don't have one, sign up at &lt;a href="https://github.com/"&gt;GitHub …&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;The purpose of this tutorial is to generatic a static site using Pelican, to add a new article to it, and to host it on Github Pages.&lt;/p&gt;
+&lt;h2&gt;Step 1: Create a GitHub Account and Repository&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Ensure you have a GitHub account.&lt;/strong&gt; If you don't have one, sign up at &lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt;. A GitHub account is required to proceed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once logged in, create a new repository with your desired name, e.g. &lt;code&gt;my-pelican-site&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: Keep this page open, as you'll need to configure the repository in a later step.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Step 2: Creating Your Site&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://docs.getpelican.com/en/latest/install.html"&gt;Install Pelican&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;pip&lt;span class="w"&gt; &lt;/span&gt;install&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pelican[markdown]&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you haven't already, set up your Pelican site:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican-quickstart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Follow the prompts to configure your Pelican site.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Where&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;you&lt;span class="w"&gt; &lt;/span&gt;want&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;create&lt;span class="w"&gt; &lt;/span&gt;your&lt;span class="w"&gt; &lt;/span&gt;new&lt;span class="w"&gt; &lt;/span&gt;web&lt;span class="w"&gt; &lt;/span&gt;site?&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;.&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+What&lt;span class="w"&gt; &lt;/span&gt;will&lt;span class="w"&gt; &lt;/span&gt;be&lt;span class="w"&gt; &lt;/span&gt;the&lt;span class="w"&gt; &lt;/span&gt;title&lt;span class="w"&gt; &lt;/span&gt;of&lt;span class="w"&gt; &lt;/span&gt;this&lt;span class="w"&gt; &lt;/span&gt;web&lt;span class="w"&gt; &lt;/span&gt;site?&lt;span class="w"&gt; &lt;/span&gt;my-pelican-site
+Who&lt;span class="w"&gt; &lt;/span&gt;will&lt;span class="w"&gt; &lt;/span&gt;be&lt;span class="w"&gt; &lt;/span&gt;the&lt;span class="w"&gt; &lt;/span&gt;author&lt;span class="w"&gt; &lt;/span&gt;of&lt;span class="w"&gt; &lt;/span&gt;this&lt;span class="w"&gt; &lt;/span&gt;web&lt;span class="w"&gt; &lt;/span&gt;site?&lt;span class="w"&gt; &lt;/span&gt;me
+What&lt;span class="w"&gt; &lt;/span&gt;will&lt;span class="w"&gt; &lt;/span&gt;be&lt;span class="w"&gt; &lt;/span&gt;the&lt;span class="w"&gt; &lt;/span&gt;default&lt;span class="w"&gt; &lt;/span&gt;language&lt;span class="w"&gt; &lt;/span&gt;of&lt;span class="w"&gt; &lt;/span&gt;this&lt;span class="w"&gt; &lt;/span&gt;web&lt;span class="w"&gt; &lt;/span&gt;site?&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;en&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;en
+Do&lt;span class="w"&gt; &lt;/span&gt;you&lt;span class="w"&gt; &lt;/span&gt;want&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;specify&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;URL&lt;span class="w"&gt; &lt;/span&gt;prefix?&lt;span class="w"&gt; &lt;/span&gt;e.g.,&lt;span class="w"&gt; &lt;/span&gt;https://example.com&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;n
+Do&lt;span class="w"&gt; &lt;/span&gt;you&lt;span class="w"&gt; &lt;/span&gt;want&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;enable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;article&lt;span class="w"&gt; &lt;/span&gt;pagination?&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;n
+What&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;your&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;time&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;zone?&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;Europe/Rome&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;Europe/Dublin
+Do&lt;span class="w"&gt; &lt;/span&gt;you&lt;span class="w"&gt; &lt;/span&gt;want&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;generate&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;tasks.py/Makefile&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;automate&lt;span class="w"&gt; &lt;/span&gt;generation&lt;span class="w"&gt; &lt;/span&gt;and&lt;span class="w"&gt; &lt;/span&gt;publishing?&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;y
+Do&lt;span class="w"&gt; &lt;/span&gt;you&lt;span class="w"&gt; &lt;/span&gt;want&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;upload&lt;span class="w"&gt; &lt;/span&gt;your&lt;span class="w"&gt; &lt;/span&gt;website&lt;span class="w"&gt; &lt;/span&gt;using&lt;span class="w"&gt; &lt;/span&gt;FTP?&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;n
+Do&lt;span class="w"&gt; &lt;/span&gt;you&lt;span class="w"&gt; &lt;/span&gt;want&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;upload&lt;span class="w"&gt; &lt;/span&gt;your&lt;span class="w"&gt; &lt;/span&gt;website&lt;span class="w"&gt; &lt;/span&gt;using&lt;span class="w"&gt; &lt;/span&gt;SSH?&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;n
+Do&lt;span class="w"&gt; &lt;/span&gt;you&lt;span class="w"&gt; &lt;/span&gt;want&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;upload&lt;span class="w"&gt; &lt;/span&gt;your&lt;span class="w"&gt; &lt;/span&gt;website&lt;span class="w"&gt; &lt;/span&gt;using&lt;span class="w"&gt; &lt;/span&gt;Dropbox?&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;n
+Do&lt;span class="w"&gt; &lt;/span&gt;you&lt;span class="w"&gt; &lt;/span&gt;want&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;upload&lt;span class="w"&gt; &lt;/span&gt;your&lt;span class="w"&gt; &lt;/span&gt;website&lt;span class="w"&gt; &lt;/span&gt;using&lt;span class="w"&gt; &lt;/span&gt;S3?&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;n
+Do&lt;span class="w"&gt; &lt;/span&gt;you&lt;span class="w"&gt; &lt;/span&gt;want&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;upload&lt;span class="w"&gt; &lt;/span&gt;your&lt;span class="w"&gt; &lt;/span&gt;website&lt;span class="w"&gt; &lt;/span&gt;using&lt;span class="w"&gt; &lt;/span&gt;Rackspace&lt;span class="w"&gt; &lt;/span&gt;Cloud&lt;span class="w"&gt; &lt;/span&gt;Files?&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;n
+Do&lt;span class="w"&gt; &lt;/span&gt;you&lt;span class="w"&gt; &lt;/span&gt;want&lt;span class="w"&gt; &lt;/span&gt;to&lt;span class="w"&gt; &lt;/span&gt;upload&lt;span class="w"&gt; &lt;/span&gt;your&lt;span class="w"&gt; &lt;/span&gt;website&lt;span class="w"&gt; &lt;/span&gt;using&lt;span class="w"&gt; &lt;/span&gt;GitHub&lt;span class="w"&gt; &lt;/span&gt;Pages?&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;n
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Step 3: View your site&lt;/h2&gt;
+&lt;p&gt;From within your project run the following and then access &lt;code&gt;http://127.0.0.1:8000/&lt;/code&gt; in your browser,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican&lt;span class="w"&gt; &lt;/span&gt;--autoreload&lt;span class="w"&gt; &lt;/span&gt;--listen
+
+open&lt;span class="w"&gt; &lt;/span&gt;http://127.0.0.1:8000/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This will generate the static files in the output directory. Any changes made to your side should be immediately reflected within your browser.&lt;/p&gt;
+&lt;h2&gt;Step 4: Adding content to your website&lt;/h2&gt;
+&lt;p&gt;Within the &lt;code&gt;content&lt;/code&gt; folder - create a new piece of content e.g. &lt;code&gt;hello.md&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Title: My first article
+Date: 2024-09-18 18:00
+Category: Hello
+
+&lt;span class="gh"&gt;# This is my first article&lt;/span&gt;
+
+Hello
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Within your browser, the following should now be shown.&lt;/p&gt;
+&lt;p&gt;For more on writing content: view &lt;a href="https://docs.getpelican.com/en/latest/content.html"&gt;writing content&lt;/a&gt; from Pelican.&lt;/p&gt;
+&lt;h2&gt;Step 5: Configure a Github action to perform the deployment&lt;/h2&gt;
+&lt;p&gt;The next step is to prepare aGithub action that will be responsible for publishing your site.&lt;/p&gt;
+&lt;p&gt;To run this action, you will need to enable &lt;code&gt;Read and write permissions&lt;/code&gt; within `Settings -&amp;gt; Actions -&amp;gt; General`` on the Repository. This is configured using the Github repository created during step 1.&lt;/p&gt;
+&lt;p&gt;Within the project folder, you will need to create a &lt;code&gt;.github&lt;/code&gt; folder and a &lt;code&gt;workflow&lt;/code&gt; folder within it before adding following Github action to &lt;code&gt;.github/workflows&lt;/code&gt;. You can save this file &lt;code&gt;publish.yml&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;Deploy Github Pages&lt;/span&gt;
+
+&lt;span class="nt"&gt;on&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;push&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;branches&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;main&lt;/span&gt;
+
+&lt;span class="nt"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="nt"&gt;build&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;runs-on&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;ubuntu-latest&lt;/span&gt;
+
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nt"&gt;steps&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;uses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;actions/checkout@v4.1.7&lt;/span&gt;
+&lt;span class="w"&gt;      &lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;uses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;nelsonjchen/gh-pages-pelican-action@0.2.0&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nt"&gt;env&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;GITHUB_TOKEN&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;${{secrets.GITHUB_TOKEN}}&lt;/span&gt;
+&lt;span class="w"&gt;          &lt;/span&gt;&lt;span class="nt"&gt;PELICAN_CONFIG_FILE&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;publishconf.py&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Step 6: Upload your static site to Github&lt;/h2&gt;
+&lt;p&gt;Add your repository as a remote and push all your changes&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git&lt;span class="w"&gt; &lt;/span&gt;init
+git&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;.
+git&lt;span class="w"&gt; &lt;/span&gt;remote&lt;span class="w"&gt; &lt;/span&gt;add&lt;span class="w"&gt; &lt;/span&gt;origin&lt;span class="w"&gt; &lt;/span&gt;&amp;lt;https://github.com/username/my-pelican-site.git
+git&lt;span class="w"&gt; &lt;/span&gt;push&lt;span class="w"&gt; &lt;/span&gt;origin&lt;span class="w"&gt; &lt;/span&gt;head
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Step 7: Configure GitHub Pages&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to your repository on GitHub (&lt;a href="https://github.com/username/my-pelican-site"&gt;https://github.com/username/my-pelican-site&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Navigate to Settings &amp;gt; Pages.&lt;/li&gt;
+&lt;li&gt;Under Source, select the gh-pages branch.&lt;/li&gt;
+&lt;li&gt;Save the settings. GitHub will display the URL where your site is published, which will be &lt;a href="https://username.github.io/my-pelican-site"&gt;https://username.github.io/my-pelican-site&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Step 8: Access Your Site&lt;/h2&gt;
+&lt;p&gt;Within the &lt;code&gt;Actions&lt;/code&gt; tab on the Github repository created, you can view the jobs run to identify if it was published sucessfully or not.&lt;/p&gt;
+&lt;p&gt;Once GitHub has built and published your site, it will be accessible at:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;https://username.github.io/my-pelican-site&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;Step 9: Next Steps&lt;/h2&gt;
+&lt;p&gt;You have now covered the basics of creating a static site, adding content, and publishing it. Why not explore the following to see how you can take your project further.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Explore Pelican &lt;a href="https://docs.getpelican.com/en/latest/themes.html"&gt;Themes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add a &lt;a href="https://docs.getpelican.com/en/latest/tips.html"&gt;Custom 404 Page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Explore the &lt;a href="https://docs.getpelican.com/en/latest/internals.html"&gt;internals&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Tutorial"></category></entry></feed>

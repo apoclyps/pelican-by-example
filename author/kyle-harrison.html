@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                        <meta charset="utf-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        <meta name="generator" content="Pelican" />
+                        <title>Pelican By Example - Kyle Harrison</title>
+                        <link rel="stylesheet" href="https://apoclyps.github.io/pelican-by-example/theme/css/main.css" />
+                                <link href="https://apoclyps.github.io/pelican-by-example/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Pelican By Example Atom Feed" />
+        </head>
+
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="https://apoclyps.github.io/pelican-by-example/">Pelican By Example</a></h1>
+                        <nav><ul>
+                                                <li><a href="https://apoclyps.github.io/pelican-by-example/category/tutorial.html">Tutorial</a></li>
+                        </ul></nav>
+                </header><!-- /#banner -->
+
+                <aside id="featured" class="body">
+                    <article>
+                        <h1 class="entry-title"><a href="https://apoclyps.github.io/pelican-by-example/getting-started-tutorial.html">Getting started tutorial</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2024-09-15T00:00:00+01:00">
+                Published: Sun 15 September 2024
+        </abbr>
+
+                <address class="vcard author">
+                        By                                 <a class="url fn" href="https://apoclyps.github.io/pelican-by-example/author/kyle-harrison.html">Kyle Harrison</a>
+                </address>
+        <p>In <a href="https://apoclyps.github.io/pelican-by-example/category/tutorial.html">Tutorial</a>.</p>
+        
+</footer><!-- /.post-info --><p>The purpose of this tutorial is to generatic a static site using Pelican, to add a new article to it, and to host it on Github Pages.</p>
+<h2>Step 1: Create a GitHub Account and Repository</h2>
+<ol>
+<li>
+<p><strong>Ensure you have a GitHub account.</strong> If you don't have one, sign up at <a href="https://github.com/">GitHub</a>. A GitHub account is required to proceed.</p>
+</li>
+<li>
+<p>Once logged in, create a new repository with your desired name, e.g. <code>my-pelican-site</code>.</p>
+</li>
+</ol>
+<blockquote>
+<p>Note: Keep this page open, as you'll need to configure the repository in a later step.</p>
+</blockquote>
+<h2>Step 2: Creating Your Site</h2>
+<p><a href="https://docs.getpelican.com/en/latest/install.html">Install Pelican</a></p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;pelican[markdown]&quot;</span>
+</code></pre></div>
+
+<p>If you haven't already, set up your Pelican site:</p>
+<div class="highlight"><pre><span></span><code>pelican-quickstart
+</code></pre></div>
+
+<p>Follow the prompts to configure your Pelican site.</p>
+<div class="highlight"><pre><span></span><code>Where<span class="w"> </span><span class="k">do</span><span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>create<span class="w"> </span>your<span class="w"> </span>new<span class="w"> </span>web<span class="w"> </span>site?<span class="w"> </span><span class="o">[</span>.<span class="o">]</span><span class="w"> </span>
+What<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>the<span class="w"> </span>title<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>web<span class="w"> </span>site?<span class="w"> </span>my-pelican-site
+Who<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>the<span class="w"> </span>author<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>web<span class="w"> </span>site?<span class="w"> </span>me
+What<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>the<span class="w"> </span>default<span class="w"> </span>language<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>web<span class="w"> </span>site?<span class="w"> </span><span class="o">[</span>en<span class="o">]</span><span class="w"> </span>en
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>specify<span class="w"> </span>a<span class="w"> </span>URL<span class="w"> </span>prefix?<span class="w"> </span>e.g.,<span class="w"> </span>https://example.com<span class="w">   </span><span class="o">(</span>Y/n<span class="o">)</span><span class="w"> </span>n
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>article<span class="w"> </span>pagination?<span class="w"> </span><span class="o">(</span>Y/n<span class="o">)</span><span class="w"> </span>n
+What<span class="w"> </span>is<span class="w"> </span>your<span class="w"> </span><span class="nb">time</span><span class="w"> </span>zone?<span class="w"> </span><span class="o">[</span>Europe/Rome<span class="o">]</span><span class="w"> </span>Europe/Dublin
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>generate<span class="w"> </span>a<span class="w"> </span>tasks.py/Makefile<span class="w"> </span>to<span class="w"> </span>automate<span class="w"> </span>generation<span class="w"> </span>and<span class="w"> </span>publishing?<span class="w"> </span><span class="o">(</span>Y/n<span class="o">)</span><span class="w"> </span>y
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>upload<span class="w"> </span>your<span class="w"> </span>website<span class="w"> </span>using<span class="w"> </span>FTP?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span><span class="w"> </span>n
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>upload<span class="w"> </span>your<span class="w"> </span>website<span class="w"> </span>using<span class="w"> </span>SSH?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span><span class="w"> </span>n
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>upload<span class="w"> </span>your<span class="w"> </span>website<span class="w"> </span>using<span class="w"> </span>Dropbox?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span><span class="w"> </span>n
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>upload<span class="w"> </span>your<span class="w"> </span>website<span class="w"> </span>using<span class="w"> </span>S3?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span><span class="w"> </span>n
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>upload<span class="w"> </span>your<span class="w"> </span>website<span class="w"> </span>using<span class="w"> </span>Rackspace<span class="w"> </span>Cloud<span class="w"> </span>Files?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span><span class="w"> </span>n
+Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>upload<span class="w"> </span>your<span class="w"> </span>website<span class="w"> </span>using<span class="w"> </span>GitHub<span class="w"> </span>Pages?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span><span class="w"> </span>n
+</code></pre></div>
+
+<h2>Step 3: View your site</h2>
+<p>From within your project run the following and then access <code>http://127.0.0.1:8000/</code> in your browser,</p>
+<div class="highlight"><pre><span></span><code>pelican<span class="w"> </span>--autoreload<span class="w"> </span>--listen
+
+open<span class="w"> </span>http://127.0.0.1:8000/
+</code></pre></div>
+
+<p>This will generate the static files in the output directory. Any changes made to your side should be immediately reflected within your browser.</p>
+<h2>Step 4: Adding content to your website</h2>
+<p>Within the <code>content</code> folder - create a new piece of content e.g. <code>hello.md</code></p>
+<div class="highlight"><pre><span></span><code>Title: My first article
+Date: 2024-09-18 18:00
+Category: Hello
+
+<span class="gh"># This is my first article</span>
+
+Hello
+</code></pre></div>
+
+<p>Within your browser, the following should now be shown.</p>
+<p>For more on writing content: view <a href="https://docs.getpelican.com/en/latest/content.html">writing content</a> from Pelican.</p>
+<h2>Step 5: Configure a Github action to perform the deployment</h2>
+<p>The next step is to prepare aGithub action that will be responsible for publishing your site.</p>
+<p>To run this action, you will need to enable <code>Read and write permissions</code> within `Settings -&gt; Actions -&gt; General`` on the Repository. This is configured using the Github repository created during step 1.</p>
+<p>Within the project folder, you will need to create a <code>.github</code> folder and a <code>workflow</code> folder within it before adding following Github action to <code>.github/workflows</code>. You can save this file <code>publish.yml</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy Github Pages</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">build</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4.1.7</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nelsonjchen/gh-pages-pelican-action@0.2.0</span>
+<span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">GITHUB_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{secrets.GITHUB_TOKEN}}</span>
+<span class="w">          </span><span class="nt">PELICAN_CONFIG_FILE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">publishconf.py</span>
+</code></pre></div>
+
+<h2>Step 6: Upload your static site to Github</h2>
+<p>Add your repository as a remote and push all your changes</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>init
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>&lt;https://github.com/username/my-pelican-site.git
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>head
+</code></pre></div>
+
+<h2>Step 7: Configure GitHub Pages</h2>
+<ol>
+<li>Go to your repository on GitHub (<a href="https://github.com/username/my-pelican-site">https://github.com/username/my-pelican-site</a>).</li>
+<li>Navigate to Settings &gt; Pages.</li>
+<li>Under Source, select the gh-pages branch.</li>
+<li>Save the settings. GitHub will display the URL where your site is published, which will be <a href="https://username.github.io/my-pelican-site">https://username.github.io/my-pelican-site</a>.</li>
+</ol>
+<h2>Step 8: Access Your Site</h2>
+<p>Within the <code>Actions</code> tab on the Github repository created, you can view the jobs run to identify if it was published sucessfully or not.</p>
+<p>Once GitHub has built and published your site, it will be accessible at:</p>
+<div class="highlight"><pre><span></span><code>&lt;https://username.github.io/my-pelican-site&gt;
+</code></pre></div>
+
+<h2>Step 9: Next Steps</h2>
+<p>You have now covered the basics of creating a static site, adding content, and publishing it. Why not explore the following to see how you can take your project further.</p>
+<ul>
+<li>Explore Pelican <a href="https://docs.getpelican.com/en/latest/themes.html">Themes</a></li>
+<li>Add a <a href="https://docs.getpelican.com/en/latest/tips.html">Custom 404 Page</a></li>
+<li>Explore the <a href="https://docs.getpelican.com/en/latest/internals.html">internals</a></li>
+</ul>                    </article>
+                </aside><!-- /#featured -->
+                <section id="extras" class="body">
+                                <div class="social">
+                                        <h2>social</h2>
+                                        <ul>
+                                                        <li><a href="https://apoclyps.github.io/pelican-by-example/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                                        </ul>
+                                </div><!-- /.social -->
+                </section><!-- /#extras -->
+
+                <footer id="contentinfo" class="body">
+                        <address id="about" class="vcard body">
+                                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+                        </address><!-- /#about -->
+
+                        <p>The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                </footer><!-- /#contentinfo -->
+
+        </body>
+</html>
